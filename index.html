@@ -7,38 +7,78 @@
     <title>Give the password</title>
   </head>
   <body>
-    <div class="container">
-      <div class="password-container">
-        <label for="generatedPassword">Generated Password:</label>
-        <input type="text" id="generatedPassword" readonly />
-        <button onclick="copyToClipboard()">Copy</button>
+    <header>
+      <h1>Give the password</h1>
+    </header>
+
+    <main class="main">
+      <div class="container">
+        <div class="password-container">
+          <label class="generated-password-label" for="generatedPassword"
+            >Generated Password:</label
+          >
+
+          <div class="generated-password">
+            <input
+              class="generated-password-input"
+              type="text"
+              id="generatedPassword"
+              readonly
+            />
+            <button class="copy-to-clipboard" onclick="copyToClipboard()">
+              <svg viewBox="0 0 16 16">
+                <path
+                  d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"
+                ></path>
+                <path
+                  d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <ul class="options-container">
+          <li class="option">
+            <input type="number" id="length" min="6" max="24" value="16" />
+            <label for="length">Password length</label>
+          </li>
+          <li class="option">
+            <input type="checkbox" id="uppercase" checked />
+            <label for="uppercase">Include Uppercase</label>
+          </li>
+          <li class="option">
+            <input type="checkbox" id="lowercase" checked />
+            <label for="lowercase">Include Lowercase</label>
+          </li>
+          <li class="option">
+            <input type="checkbox" id="numbers" checked />
+            <label for="numbers">Include Numbers</label>
+          </li>
+          <li class="option">
+            <input type="checkbox" id="symbols" checked />
+            <label for="symbols">Include Symbols</label>
+          </li>
+        </ul>
+
+        <button class="generated-password-button" onclick="generatePassword()">
+          Generate Password
+        </button>
       </div>
+    </main>
 
-      <ul class="options-container">
-        <li class="option">
-          <input type="checkbox" id="uppercase" />
-          <label for="uppercase">Include Uppercase</label>
-        </li>
-        <li class="option">
-          <input type="checkbox" id="lowercase" />
-          <label for="lowercase">Include Lowercase</label>
-        </li>
-        <li class="option">
-          <input type="checkbox" id="numbers" />
-          <label for="numbers">Include Numbers</label>
-        </li>
-        <li class="option">
-          <input type="checkbox" id="symbols" />
-          <label for="symbols">Include Symbols</label>
-        </li>
-        <li class="option">
-          <input type="number" id="length" min="6" max="24" value="12" />
-          <label for="length">Number of Digits</label>
-        </li>
-      </ul>
-
-      <button onclick="generatePassword()">Generate Password</button>
-    </div>
+    <section class="donate">
+      <a
+        class="donate-link"
+        href="https://revolut.me/patriarxis"
+        target="_blank"
+      >
+        <img
+          src="https://patriarxis.com/assets/donate-button.svg"
+          alt="Donate button"
+        />
+      </a>
+    </section>
 
     <script src="./password-generator.js"></script>
   </body>

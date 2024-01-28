@@ -49,5 +49,12 @@ function copyToClipboard() {
   var passwordField = document.getElementById("generatedPassword");
   passwordField.select();
   document.execCommand("copy");
-  alert("Password copied to clipboard!");
+}
+
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
 }
