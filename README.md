@@ -1,10 +1,5 @@
-# Give The Password
-This is a client side password generator
+# Vue 3 + TypeScript + Vite
 
-## Donate
+This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
-> **Buy me a coffee**  
-> If you find this script helpful and would like to support the project, consider buying me a coffee!  
-> [revolut.me/patriarxis](https://revolut.me/patriarxis)
-> 
-> [![Buy Me a Coffee](https://patriarxis.com/assets/donate-button.svg)](https://revolut.me/patriarxis)
+Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
