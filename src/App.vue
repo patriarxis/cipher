@@ -2,8 +2,11 @@
   <main class="main">
     <section class="container">
       <header class="header">
-        <h1>Give the password</h1>
-        <p>Lorem ipsum dolor sit amet.</p>
+        <h1>Cipher - Password Generator</h1>
+        <p>
+          Cipher is a secure, client-side password generator. No data is stored
+          or sent—everything happens in your browser.
+        </p>
       </header>
 
       <GeneratedPassword
@@ -84,12 +87,10 @@ const generatePassword = () => {
     return;
   }
 
-  // Fill remaining length with random characters
   for (let i = newPassword.length; i < length.value; i++) {
     newPassword += getRandomChar(charset);
   }
 
-  // Shuffle the password
   password.value = newPassword
     .split("")
     .sort(() => 0.5 - Math.random())
@@ -124,6 +125,7 @@ const copyToClipboard = () => {
   flex-direction: column;
   width: 100%;
   padding: 2rem;
+  gap: .5rem;
 }
 
 .generated-password-button {
